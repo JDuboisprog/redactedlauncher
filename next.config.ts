@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    serverComponentsExternalPackages: [
+      "@solana/web3.js",
+      "@solana/spl-token",
+      "@upstash/redis",
+    ],
+  },
 };
 
 export default nextConfig;
